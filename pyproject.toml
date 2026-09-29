@@ -1,0 +1,17 @@
+[project]
+name = "virtual-queues"
+version = "0.1.0"
+description = "Virtual queues stream processor test assignment"
+requires-python = ">=3.11"
+dependencies = [
+  "aiokafka>=0.10,<1",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

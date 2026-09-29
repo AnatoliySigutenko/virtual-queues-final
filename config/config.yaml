@@ -1,0 +1,118 @@
+kafka:
+  bootstrap_servers: "localhost:9092"
+  telemetry_topic: "telemetry.v1"
+  queue_topic: "queue.v1"
+  decision_topic: "decision.v1"
+  group_id: "virtual-queue-processor"
+
+processing:
+  service_seconds: 200
+  maneuver_seconds: 30
+  travel_speed_mps: 10.0
+  station_radius_m: 50.0
+  unloading_radius_m: 50.0
+  stopped_speed_kmh: 1.0
+  decision_radius_m: 1500.0
+  queue_horizon_seconds: 1800
+  freshness_seconds: 30
+  min_gain_seconds: 60
+
+unloading:
+  lat: 49.1000
+  lon: 142.7000
+
+stations:
+  - uuid: S1
+    lat: 49.1200
+    lon: 142.6500
+  - uuid: S2
+    lat: 49.1200
+    lon: 142.7500
+  - uuid: S3
+    lat: 49.0800
+    lon: 142.6500
+  - uuid: S4
+    lat: 49.0800
+    lon: 142.7500
+
+units:
+  - uuid: T01
+    home_station: S1
+  - uuid: T02
+    home_station: S1
+  - uuid: T03
+    home_station: S1
+  - uuid: T04
+    home_station: S1
+  - uuid: T05
+    home_station: S1
+  - uuid: T06
+    home_station: S1
+  - uuid: T07
+    home_station: S1
+  - uuid: T08
+    home_station: S1
+  - uuid: T09
+    home_station: S1
+  - uuid: T10
+    home_station: S1
+  - uuid: T11
+    home_station: S2
+  - uuid: T12
+    home_station: S2
+  - uuid: T13
+    home_station: S2
+  - uuid: T14
+    home_station: S2
+  - uuid: T15
+    home_station: S2
+  - uuid: T16
+    home_station: S2
+  - uuid: T17
+    home_station: S2
+  - uuid: T18
+    home_station: S2
+  - uuid: T19
+    home_station: S2
+  - uuid: T20
+    home_station: S2
+  - uuid: T21
+    home_station: S3
+  - uuid: T22
+    home_station: S3
+  - uuid: T23
+    home_station: S3
+  - uuid: T24
+    home_station: S3
+  - uuid: T25
+    home_station: S3
+  - uuid: T26
+    home_station: S3
+  - uuid: T27
+    home_station: S3
+  - uuid: T28
+    home_station: S3
+  - uuid: T29
+    home_station: S3
+  - uuid: T30
+    home_station: S3
+  - uuid: T31
+    home_station: S4
+  - uuid: T32
+    home_station: S4
+  - uuid: T33
+    home_station: S4
+  - uuid: T34
+    home_station: S4
+  - uuid: T35
+    home_station: S4
+  - uuid: T36
+    home_station: S4
+  - uuid: T37
+    home_station: S4
+  - uuid: T38
+    home_station: S4
+  - uuid: T39
+    home_station: S4
+  - uuid: T40
+    home_station: S4
