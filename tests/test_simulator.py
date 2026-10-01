@@ -1,6 +1,6 @@
-from simulator.simulator import interpolate
-from app.config import Point
-from app.geo import distance_m
+from src.simulator.simulator import interpolate
+from src.app.config import Point
+from src.app.geo import distance_m
 
 def test_interpolate():
     a = Point(0, 0)

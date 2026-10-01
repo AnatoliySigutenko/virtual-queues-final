@@ -8,6 +8,8 @@ from .state import StateManager
 from .queue_engine import QueueEngine
 from .decision_engine import DecisionEngine
 from .geo import distance_m
+from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
+
 
 log = logging.getLogger("virtual-queues")
 
@@ -38,8 +40,7 @@ def decision_payload(d):
             out["gain_seconds"] = d.gain_seconds
     return out
 
-async def run(config_path="config/config.yaml"):
-    from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
+async def run(config_path="src/config/config.yaml"):
     cfg = load_config(config_path)
     state = StateManager(cfg)
     queues = QueueEngine(cfg, state.units, state.stations)

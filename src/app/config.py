@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from pathlib import Path
 import yaml
+import os
+
 
 @dataclass(frozen=True)
 class Point:
@@ -42,7 +44,7 @@ class AppConfig:
     units: dict[str, UnitConfig]
     processing: ProcessingConfig
 
-def load_config(path: str | Path = "config/config.yaml") -> AppConfig:
+def load_config(path: str | Path = Path(__file__).parent.parent / "config" / "config.yaml") -> AppConfig:
     raw = yaml.safe_load(Path(path).read_text())
     p = raw["processing"]
     processing = ProcessingConfig(**p)

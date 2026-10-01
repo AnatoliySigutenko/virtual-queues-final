@@ -1,6 +1,6 @@
-from app.config import load_config
-from app.state import StateManager
-from app.models import Telemetry
+from src.app.config import load_config
+from src.app.state import StateManager
+from src.app.models import Telemetry
 
 def test_duplicates_and_out_of_order_are_ignored():
     cfg = load_config()
